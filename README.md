@@ -1,9 +1,9 @@
 # single-linked-list-template-class
 Single Linked List using c++ template class with iterator
 
-the Linked list has the following opertaion :
+the Linked list has the following opertaion :-
 
-1- front ==> return the first element in the list
+1- front : return the first element in the list
 
 2- back ==> return the last element in the list
 
