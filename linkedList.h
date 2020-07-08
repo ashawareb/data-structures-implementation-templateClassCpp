@@ -21,15 +21,15 @@ private:
 public:
     Iterator();
 
-    Iterator(Node<Type> *ptr);
+    Iterator(const Node<Type> *ptr);
 
     Type operator*();
 
     Iterator<Type> operator++();
 
-    bool operator==(Iterator<Type> &right);
+    bool operator==(const Iterator<Type> &right);
 
-    bool operator!=(Iterator<Type> &right);
+    bool operator!=(const Iterator<Type> &right);
 };
 
 template<class Type>
@@ -38,7 +38,7 @@ Iterator<Type>::Iterator() {
 }
 
 template<class Type>
-Iterator<Type>::Iterator(Node<Type> *ptr) {
+Iterator<Type>::Iterator(const Node<Type> *ptr) {
     current = ptr;
 
 }
@@ -55,12 +55,12 @@ Iterator<Type> Iterator<Type>::operator++() {
 }
 
 template<class Type>
-bool Iterator<Type>::operator==(Iterator<Type> &right) {
+bool Iterator<Type>::operator==(const Iterator<Type> &right) {
     return (current == right.current);
 }
 
 template<class Type>
-bool Iterator<Type>::operator!=(Iterator<Type> &right) {
+bool Iterator<Type>::operator!=(const Iterator<Type> &right) {
     return (current != right.current);
 }
 
