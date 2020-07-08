@@ -181,13 +181,13 @@ void LinkedList<Type>::insert(Type in, int pos) {
         Node<Type> *temp = new Node<Type>();
         Node<Type> *temp2 = new Node<Type>();
         temp->data = in;
-        temp->next = NULL;
+        temp->link = NULL;
         temp2 = head;
         for (int i = 0; i < pos - 1; i++) {
-            temp2 = temp2->next;
+            temp2 = temp2->link;
         }
-        temp->next = temp2->next;
-        temp2->next = temp;
+        temp->link = temp2->link;
+        temp2->link = temp;
         sz++;
     }
 }
@@ -200,40 +200,35 @@ void LinkedList<Type>::pop_back() {
     }
     Node<Type> *temp = new Node<Type>();
     temp = head;
-    for (int i = 0; i < sz - 1; i++) {
+    for (int i = 0; i < sz - 2; i++) {
         temp = temp->link;
     }
-    delete tail;
-    tail = temp;
-    temp->link = NULL;
+    Node<Type> *temp2 = new Node<Type>();
+    temp2 = temp->link;
+    temp->link = temp2->link;
     sz--;
+    delete temp2;
 }
 
 template<class Type>
 void LinkedList<Type>::erase(int pos) {
+    Node<Type> *temp = new Node<Type>();
+    temp = head;
     if (pos >= sz) {
-        cout << "Invalid position, Out of range " << endl;
-        return;
-    }
-    if (pos == 0) {
-        Node<Type> *temp = new Node<Type>();
-        temp = head;
+        cout << "Invalid position \n";
+    } else if (pos == 0) {
         head = temp->link;
-        delete temp;
         sz--;
-    } else if (pos = sz - 1) {
-        pop_back();
+        delete temp;
     } else {
-        Node<Type> *temp = new Node<Type>();
-        Node<Type> *temp2 = new Node<Type>();
-        temp = head;
         for (int i = 0; i < pos - 1; i++) {
             temp = temp->link;
         }
+        Node<Type> *temp2 = new Node<Type>();
         temp2 = temp->link;
         temp->link = temp2->link;
-        delete temp2;
         sz--;
+        delete temp2;
     }
 }
 
@@ -259,8 +254,8 @@ void LinkedList<Type>::reverse() {
         current = head;
         prev = NULL;
         while (current != NULL) {
-            next = current->next;
-            current->next = prev;
+            next = current->link;
+            current->link = prev;
             prev = current;
             current = next;
         }
