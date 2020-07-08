@@ -159,12 +159,11 @@ void LinkedList<Type>::push_back(Type in) {
     if (head == NULL) {
         head = temp;
         tail = temp;
-        sz++;
     } else {
         tail->link = temp;
         tail = temp;
-        sz++;
     }
+    sz++;
 }
 
 template<class Type>
