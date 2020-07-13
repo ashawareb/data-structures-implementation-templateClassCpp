@@ -9,13 +9,13 @@
   - push_back : push element to the end of the list
   - insert : insert element to specific position of the list
   - pop_back : remove the last element of the list
-  -  find : search for a spesific element in the list
-  -  reverse : reverse the list
-  -  isEmpty : check if the list is empty or not
-  -   length : return the size of the list
-  -   clear : delete all elements in the list
-  -   print : print the list
-  -   reversePrint : print the list starting from the last element to the first element (only in the doubly LinkedList)
+  - find : search for a spesific element in the list
+  - reverse : reverse the list
+  - isEmpty : check if the list is empty or not
+  - length : return the size of the list
+  - clear : delete all elements in the list
+  - print : print the list
+  - reversePrint : print the list starting from the last element to the first element (only in the doubly LinkedList)
   
 # 2- Stack (Array-based & Linked List-based)
 # operation :
