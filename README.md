@@ -16,3 +16,14 @@
   -   clear : delete all elements in the list
   -   print : print the list
   -   reversePrint : print the list starting from the last element to the first element (only in the doubly LinkedList)
+  
+# 2- Stack (Array-based & Linked List-based)
+# operation :
+  - push : add element to the stack 
+  - pop : delete element from the stack
+  - top : return the element on the top of the stack
+  - isEmpty : check if the stack is empty or not 
+  - isFull : check if the stack full
+  - length : return the number of element in the stack
+  - clear : clear all elements in the stack
+  - print : print all elements in the stack
