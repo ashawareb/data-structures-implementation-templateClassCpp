@@ -27,3 +27,6 @@
   - length : return the number of element in the stack
   - clear : clear all elements in the stack
   - print : print all elements in the stack
+# some stack application :
+  - Check balanced parentheses
+  - Evaluation of postfix expression
