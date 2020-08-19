@@ -30,3 +30,15 @@
 # some stack application :
   - Check balanced parentheses
   - Evaluation of postfix expression
+
+# 3- Queue(Array-based)
+# operation :
+  - push : add element to the queue
+  - pop : delete element from the queue
+  - isEmpty : check if the queue is empty or not
+  - isFull : check if the queue is full or not
+  - front : return the first element in the queue
+  - back : return the last element in the queue
+  - length : return the size of the queue
+  - clear : delete all elements in the queue
+  - print : print the list
