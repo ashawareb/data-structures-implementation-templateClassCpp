@@ -38,6 +38,6 @@ int main() {
     q.pop();
     q.print();
     cout << q.length() << endl;*/
-
+    
     return 0;
 }
