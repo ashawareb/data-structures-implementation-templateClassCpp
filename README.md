@@ -31,7 +31,7 @@
   - Check balanced parentheses
   - Evaluation of postfix expression
 
-# 3- Queue(Array-based)
+# 3- Queue(Array-based & Linked List-based)
 # operation :
   - push : add element to the queue
   - pop : delete element from the queue
